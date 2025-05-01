@@ -8,10 +8,14 @@ const Login = () => {
 	const [password, setPassword] = useState("");
 	const navigate = useNavigate();
 	const { cart } = useSelector((state) => state.products);
-	function handleLogin() {
+	function handleLogin(e) {
+		e.preventDefault();
 		const user =
 			JSON.parse(localStorage.getItem("user")) || null;
-
+		if (!user) {
+			toast.error("User not found");
+			return;
+		}
 		if (
 			user.email === email &&
 			user.password === password
@@ -28,10 +32,6 @@ const Login = () => {
 				JSON.stringify({ ...user, Authenticated: false }),
 			);
 			toast.error("Invalid email or password");
-			return;
-		}
-		if (!user) {
-			toast.error("User not Found");
 			return;
 		}
 	}
