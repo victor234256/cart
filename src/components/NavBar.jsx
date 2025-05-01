@@ -22,7 +22,7 @@ const NavBar = () => {
 	);
 	const user =
 		JSON.parse(localStorage.getItem("user")) || null;
-	const isAuthenticated = user?.Authenticated;
+	const isAuthenticated = user.authenticated;
 	const navigate = useNavigate();
 
 	const handleCartview = () => {
@@ -36,7 +36,7 @@ const NavBar = () => {
 	const handleLogout = () => {
 		localStorage.setItem(
 			"user",
-			JSON.stringify({ ...user, Authenticated: false }),
+			JSON.stringify({ ...user, authenticated: false }),
 		);
 		toast.warn("Logged out successfully");
 		navigate("/");

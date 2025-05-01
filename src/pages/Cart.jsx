@@ -31,7 +31,7 @@ const Cart = () => {
 	const user =
 		JSON.parse(localStorage.getItem("user")) || null;
 
-	const isAuthenticated = user.Authenticated;
+	const isAuthenticated = user.authenticated;
 	useEffect(() => {
 		// dispatch(clearCartNotification());
 		if (cart.length === 0) {

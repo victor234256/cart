@@ -13,7 +13,7 @@ const Signin = () => {
 			name,
 			email,
 			password,
-			Authenticated: false,
+			authenticated: false,
 		};
 
 		localStorage.setItem("user", JSON.stringify(user));
