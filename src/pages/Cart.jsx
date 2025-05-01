@@ -52,7 +52,7 @@ const Cart = () => {
 			toast.success(
 				"Checkout successful! Redirecting to dashboard...",
 			);
-			navigate("/dashboard");
+			navigate("dashboard");
 		}
 	}
 	return (

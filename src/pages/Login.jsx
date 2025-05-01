@@ -17,7 +17,7 @@ const Login = () => {
 			user.password === password
 		) {
 			toast.success("Logged in successfully");
-			cart.length >= 1 ? navigate("/cart") : navigate("/");
+			cart.length >= 1 ? navigate("cart") : navigate("/");
 			localStorage.setItem(
 				"user",
 				JSON.stringify({ ...user, Authenticated: true }),
