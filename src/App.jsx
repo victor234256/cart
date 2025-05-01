@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 import Cart from "./pages/Cart";
-import SigninLayout from "./components/signinLayout";
+import SigninLayout from "./components/SigninLayout";
 import Signin from "./pages/Signin";
 import Login from "./pages/Login";
 import { Checkout } from "./pages/Checkout";
