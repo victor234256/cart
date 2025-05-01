@@ -1,8 +1,8 @@
-#🛒 Vikki Pro — React + Vite Shopping Cart App
+##🛒 Vikki Pro — React + Vite Shopping Cart App
 A modern shopping cart application built with React, Vite, and Redux Toolkit.
 This project includes dynamic product fetching, cart management, user authentication, and custom modals — all integrated in a clean, user-friendly interface.
 
-#🚀 Features
+##🚀 Features
 ⚡ Built with React + Vite for lightning-fast performance
 
 🛍️ Product listing using Fake Store API
@@ -21,7 +21,7 @@ This project includes dynamic product fetching, cart management, user authentica
 
 ☁️ Deployed on Vercel
 
-#🧰 Tech Stack
+##🧰 Tech Stack
 React + Vite
 
 Redux Toolkit for state management
