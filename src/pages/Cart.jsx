@@ -28,10 +28,18 @@ const Cart = () => {
 	const [open, setOpen] = useState(false);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const user =
-		JSON.parse(localStorage.getItem("user")) || null;
+	let user = null;
 
-	const isAuthenticated = user.authenticated;
+	try {
+		user = JSON.parse(localStorage.getItem("user"));
+	} catch (e) {
+		console.error(
+			"Error parsing user from localStorage",
+			e,
+		);
+	}
+
+	const isAuthenticated = user?.Authenticated ?? false;
 	useEffect(() => {
 		// dispatch(clearCartNotification());
 		if (cart.length === 0) {

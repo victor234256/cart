@@ -2,9 +2,18 @@ import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 
 const AuthenticatedLayout = () => {
-	const user =
-		JSON.parse(localStorage.getItem("user")) || null;
-	const isAuthenticated = user.authenticated;
+	let user = null;
+
+	try {
+		user = JSON.parse(localStorage.getItem("user"));
+	} catch (e) {
+		console.error(
+			"Error parsing user from localStorage",
+			e,
+		);
+	}
+
+	const isAuthenticated = user?.Authenticated ?? false;
 
 	return isAuthenticated ? (
 		<>
