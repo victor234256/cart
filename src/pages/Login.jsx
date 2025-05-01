@@ -23,7 +23,12 @@ const Login = () => {
 				JSON.stringify({ ...user, Authenticated: true }),
 			);
 		} else {
+			localStorage.setItem(
+				"user",
+				JSON.stringify({ ...user, Authenticated: false }),
+			);
 			toast.error("Invalid email or password");
+			return;
 		}
 		if (!user) {
 			toast.error("User not Found");
