@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Signin = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const navigate = useNavigate();
 
 	function handleSignin(e) {
 		e.preventDefault();
@@ -18,7 +20,7 @@ const Signin = () => {
 
 		localStorage.setItem("user", JSON.stringify(user));
 		toast.success("You have Successfully Registered");
-		<Navigate to={"signinlayout"} />;
+		navigate("signinlayout");
 	}
 	return (
 		<div>

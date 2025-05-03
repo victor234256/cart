@@ -26,6 +26,9 @@ const Login = () => {
 				"user",
 				JSON.stringify({ ...user, authenticated: true }),
 			);
+			setTimeout(() => {
+				window.location.reload();
+			}, [2000]);
 		} else {
 			localStorage.setItem(
 				"user",
@@ -35,6 +38,7 @@ const Login = () => {
 			return;
 		}
 	}
+
 	return (
 		<div>
 			<form

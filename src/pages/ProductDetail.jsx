@@ -14,12 +14,14 @@ const ProductDetail = ({ id }) => {
 	const { product, productLoading } = useSelector(
 		(state) => state.products,
 	);
-	const navigate = useNavigate();
+
 	const dispatch = useDispatch();
 	function handleAddCart() {
 		dispatch(addItem(product));
 		toast.success("Cart Added Successfully");
-		navigate("/");
+		setTimeout(() => {
+			window.location.reload();
+		}, [2000]);
 	}
 	useEffect(() => {
 		if (id) {

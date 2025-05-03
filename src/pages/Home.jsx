@@ -44,15 +44,21 @@ const Home = () => {
 				<div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5] sm:grid-cols-2">
 					{carts.map((product) => (
 						<div key={product.id}>
-							<div className="card shadow-2xl rounded-2xl p-5 h-[100%] mr-3">
-								<img
-									src={product.image}
-									alt={product.title}
-									className="w-[220px] md:h-[30vh] sm:h-[20vh]"
-								/>
-								<div>
-									{product.title}
-									<p>${product.price}</p>
+							<div className="card shadow-2xl rounded-2xl p-5 h-full mr-3">
+								<div className="w-full h-48 flex items-center justify-center overflow-hidden">
+									<img
+										src={product.image}
+										alt={product.title}
+										className="h-full w-auto object-contain"
+									/>
+								</div>
+								<div className="mt-4">
+									<h2 className="font-semibold text-lg">
+										{product.title}
+									</h2>
+									<p className="text-gray-700">
+										${product.price}
+									</p>
 								</div>
 								<div>
 									<Button
