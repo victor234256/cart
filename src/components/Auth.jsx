@@ -13,7 +13,7 @@ const AuthenticatedLayout = () => {
 		);
 	}
 
-	const isAuthenticated = user?.Authenticated ?? false;
+	const isAuthenticated = user?.authenticated ?? false;
 
 	return isAuthenticated ? (
 		<>

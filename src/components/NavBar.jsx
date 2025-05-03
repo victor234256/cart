@@ -20,7 +20,7 @@ const NavBar = () => {
 	const { totalItems, cart } = useSelector(
 		(state) => state.products,
 	);
-	let user = null;
+	let user;
 
 	try {
 		user = JSON.parse(localStorage.getItem("user"));
@@ -31,7 +31,7 @@ const NavBar = () => {
 		);
 	}
 
-	const isAuthenticated = user?.Authenticated ?? false;
+	const isAuthenticated = user?.authenticated ?? false;
 	const navigate = useNavigate();
 
 	const handleCartview = () => {

@@ -39,7 +39,7 @@ const Cart = () => {
 		);
 	}
 
-	const isAuthenticated = user?.Authenticated ?? false;
+	const isAuthenticated = user?.authenticated;
 	useEffect(() => {
 		// dispatch(clearCartNotification());
 		if (cart.length === 0) {
@@ -60,6 +60,7 @@ const Cart = () => {
 			toast.success(
 				"Checkout successful! Redirecting to dashboard...",
 			);
+			setOpen(false);
 			navigate("/dashboard");
 		}
 	}
